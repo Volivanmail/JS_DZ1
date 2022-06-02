@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Первое домашнее задание</title>
+</head>
+<body>
+    <p>Loading, please wait...</p>
+    <script>
+        let n = Math.floor(Math.random() * 1000);
+        console.log(n)
+            
+        while (true){
+            const userN = prompt('угадай число от 0 до 999, а если сдаешься то "q":');
+            if (userN === 'q') {
+                alert('Bye');
+                break;
+            } else if (userN === undefined) {
+                alert('Пусто!');
+            } else if (isNaN(userN) || (userN < 0 || userN > 999)) {
+                alert('Вы ввели некорректное значение');
+            } else if (userN == n) {
+                alert('Угадал!');
+                break;
+            } else if (userN < n) {
+                alert('Что так мало?');
+            } else {
+                alert('Ого! давай поменьше!');
+            }
+        }
+        
+    </script>
+</body>
+</html>
