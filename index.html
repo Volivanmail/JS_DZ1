@@ -17,7 +17,7 @@
             if (userN === 'q') {
                 alert('Bye');
                 break;
-            } else if (userN === undefined) {
+            } else if (userN.length == 0) {
                 alert('Пусто!');
             } else if (isNaN(userN) || (userN < 0 || userN > 999)) {
                 alert('Вы ввели некорректное значение');
